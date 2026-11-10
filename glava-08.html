@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'none'; media-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<link rel="canonical" href="https://medved-btw.github.io/glava-08.html">
+<meta property="og:url" content="https://medved-btw.github.io/glava-08.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Глава 08. Атаки на сайты и сервисы · Кибербезопасность для btw player</title>
+<meta name="description" content="Иногда атакуют не тебя, а сервис, которым ты пользуешься. Ты не можешь его починить, но можешь уменьшить последствия.">
+<meta property="og:site_name" content="Кибербезопасность для btw player">
+<meta property="og:title" content="Глава 08. Атаки на сайты и сервисы">
+<meta property="og:description" content="Иногда атакуют не тебя, а сервис, которым ты пользуешься. Ты не можешь его починить, но можешь уменьшить последствия.">
+<meta name="referrer" content="no-referrer">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/fx.css">
+</head>
+<body data-chapter="08">
+<a class="skip" href="#main">К содержимому</a>
+<div class="screen-vf" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<div class="hud" aria-hidden="true"><span class="lbl red" id="hud-label">[ ЭТАП 01 · ТЗ ]</span><span class="cells" id="hud-cells"><span class="on"></span><span></span><span></span><span></span><span></span></span><span class="pc" id="hud-pc">0%</span></div>
+<header class="top"><div class="wrap">
+<a class="logo" href="index.html">[ КИБЕРБЕЗОПАСНОСТЬ <span class="lg2">ДЛЯ BTW PLAYER ]</span></a>
+<nav class="nav" aria-label="Разделы"><a href="razvod.html">Угрозы</a><a href="sled.html">Защита</a><a href="lab.html">Практика</a><a href="academy.html" aria-current="page">Знания</a></nav>
+<button class="btn sm" type="button" id="calm" aria-pressed="false">спокойный режим</button>
+</div></header>
+<main id="main">
+<section class="wrap">
+<nav class="crumbs" aria-label="Путь"><a href="index.html">Главная</a> / <a href="academy.html">Академия</a> / Глава 08</nav>
+<div class="phead">
+<div class="stack"><span class="lbl">[ ГЛАВА 08 · 5-7 МИНУТ · 3 ВОПРОСА ]</span><h1 class="glitch-t" data-decode>Атаки на сайты и сервисы</h1><p class="muted">Иногда атакуют не тебя, а сервис, которым ты пользуешься. Ты не можешь его починить, но можешь уменьшить последствия.</p></div>
+<div class="vf cv-box cover-box"><span class="c tl"></span><span class="c tr"></span><span class="c bl"></span><span class="c br"></span><canvas data-ascii="text" data-text="SQL" aria-hidden="true"></canvas></div>
+</div>
+</section><section class="wrap"><div class="build" data-name="ГЛАВА 08" data-slug="chapter"><div class="chapter">
+<aside class="toc" aria-label="В этой главе"><span class="lbl">[ В ЭТОЙ ГЛАВЕ ]</span><a href="#sqli">Инъекции</a><a href="#xss">XSS: чужой скрипт на странице</a><a href="#ddos">DDoS: завалить запросами</a><a href="#leak">Утечки баз</a><a href="#you">Что можешь сделать ты</a><a href="#quiz">Проверь себя</a><a href="#sources">Источники</a></aside>
+<article class="prose"><section id="sqli" class="stack"><h2>Инъекции</h2><p>Сайт берёт то, что ты ввёл в поле, и вставляет в запрос к своей базе данных. Если он не проверяет ввод, атакующий может подсунуть вместо имени кусок команды и заставить базу выдать чужие данные. Это SQL-инъекция, одна из самых старых и опасных ошибок.</p></section><section id="xss" class="stack"><h2>XSS: чужой скрипт на странице</h2><p>Если сайт показывает введённый текст без проверки, туда можно подсунуть скрипт. Он выполнится в браузере у каждого, кто откроет страницу, и может украсть вход в аккаунт. В списке главных рисков OWASP XSS с 2021 года входит в общую категорию инъекций.</p></section><section id="ddos" class="stack"><h2>DDoS: завалить запросами</h2><p>Тысячи заражённых устройств одновременно обращаются к сайту, пока он не перестаёт отвечать. Данные при этом обычно не крадут, но сервис недоступен. Иногда DDoS используют как отвлекающий манёвр.</p></section><section id="leak" class="stack"><h2>Утечки баз</h2><p>Когда сервис взламывают, наружу выходят почты, телефоны, адреса, иногда хэши паролей. Для тебя последствия такие:</p>
+<ul><li>пароль из этой базы попробуют на других сайтах;</li><li>по телефону и имени тебя будут обзванивать «из банка»;</li><li>адрес и заказы используют для правдоподобного фишинга.</li></ul></section><section id="you" class="stack"><h2>Что можешь сделать ты</h2><ul><li>Свой пароль для каждого сайта: утечка одного не откроет остальные.</li>
+<li>Двухфакторка: украденного пароля мало для входа.</li>
+<li>Проверка почты на haveibeenpwned.com и смена паролей после утечек.</li>
+<li>Минимум данных при регистрации: чего нет в базе, то не утечёт.</li></ul></section>
+<div class="key"><span class="lbl red">[ ГЛАВНОЕ ИЗ ГЛАВЫ ]</span><p>Ты не отвечаешь за ошибки чужих сайтов, но отвечаешь за последствия: уникальные пароли и двухфакторка превращают утечку в мелкую неприятность.</p></div>
+<section id="quiz" class="stack"><h2>Проверь себя</h2><div class="cq" data-answer="0" data-why="Сайт выполняет команду вместо обычного ввода."><fieldset><legend>1. Что делает SQL-инъекция?</legend><label class="opt" for="q08-1-0"><input type="radio" name="q08-1" id="q08-1-0"><span>Подсовывает команду в запрос к базе данных</span></label><label class="opt" for="q08-1-1"><input type="radio" name="q08-1" id="q08-1-1"><span>Заваливает сайт запросами</span></label><label class="opt" for="q08-1-2"><input type="radio" name="q08-1" id="q08-1-2"><span>Шифрует файлы</span></label></fieldset><p class="res" hidden></p></div><div class="cq" data-answer="1" data-why="Перебор паролей из утечек массово автоматизирован."><fieldset><legend>2. Чем опасна утечка базы для тебя, если пароль везде один?</legend><label class="opt" for="q08-2-0"><input type="radio" name="q08-2" id="q08-2-0"><span>Ничем</span></label><label class="opt" for="q08-2-1"><input type="radio" name="q08-2" id="q08-2-1"><span>Его попробуют на почте, банке и соцсетях</span></label><label class="opt" for="q08-2-2"><input type="radio" name="q08-2" id="q08-2-2"><span>Сайт удалит аккаунт</span></label></fieldset><p class="res" hidden></p></div><div class="cq" data-answer="1" data-why="Сервер перегружают запросами."><fieldset><legend>3. Что обычно делает DDoS?</legend><label class="opt" for="q08-3-0"><input type="radio" name="q08-3" id="q08-3-0"><span>Крадёт пароли</span></label><label class="opt" for="q08-3-1"><input type="radio" name="q08-3" id="q08-3-1"><span>Делает сервис недоступным</span></label><label class="opt" for="q08-3-2"><input type="radio" name="q08-3" id="q08-3-2"><span>Меняет текст на сайте</span></label></fieldset><p class="res" hidden></p></div></section>
+<section id="sources" class="stack"><h2>Источники</h2><div class="src"><a href="https://www.blackduck.com/blog/owasp-top-10-injection.html" rel="noopener noreferrer">OWASP Top 10: Injection (Black Duck)</a><a href="https://haveibeenpwned.com" rel="noopener noreferrer">Проверка почты на утечки (Have I Been Pwned)</a></div></section>
+<nav class="pn" aria-label="Главы"><a class="btn" href="glava-07.html">← Глава 07</a><a class="btn p" href="glava-09.html">Глава 09: Как защищаются компании →</a></nav>
+</article></div></div></section>
+<section class="wrap"><footer class="foot"><div class="stack" style="gap:8px;max-width:520px"><span class="logo">[ КИБЕРБЕЗОПАСНОСТЬ <span class="lg2">ДЛЯ BTW PLAYER ]</span></span><p class="muted small">Учебный проект о приватности и кибербезопасности. Сайт ничего о тебе не собирает: без счётчиков и cookies, а шрифты и скрипты лежат на нём самом, так что страница ни к кому больше не обращается. В браузере хранятся только твои отметки в чек-листе, прочитанные главы и выбор «спокойного режима».</p><p class="muted small">Все банки, магазины и люди в примерах выдуманные. Адреса в зоне .example зарезервированы для учебных примеров и никому не принадлежат.</p></div><nav aria-label="Все страницы"><a href="index.html">Главная</a><a href="razvod.html">Разводы</a><a href="ssylki.html">Ссылки</a><a href="faily.html">Файлы</a><a href="vzlom.html">История взлома</a><a href="sled.html">Свой след</a><a href="checklist.html">Чек-лист</a><a href="lab.html">Лаборатория</a><a href="test.html">Тест</a><a href="academy.html">Академия</a><a href="slovar.html">Словарь</a></nav></footer></section>
+</main>
+<script src="assets/fx.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

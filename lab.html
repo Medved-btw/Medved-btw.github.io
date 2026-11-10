@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'none'; media-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<link rel="canonical" href="https://medved-btw.github.io/lab.html">
+<meta property="og:url" content="https://medved-btw.github.io/lab.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Лаборатория · Кибербезопасность для btw player</title>
+<meta name="description" content="Инструменты в браузере: разбор ссылки, стойкость пароля, шифрование и хэш, данные устройства, метаданные фото.">
+<meta property="og:site_name" content="Кибербезопасность для btw player">
+<meta property="og:title" content="Лаборатория">
+<meta property="og:description" content="Инструменты в браузере: разбор ссылки, стойкость пароля, шифрование и хэш, данные устройства, метаданные фото.">
+<meta name="referrer" content="no-referrer">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/fx.css">
+</head>
+<body>
+<a class="skip" href="#main">К содержимому</a>
+<div class="screen-vf" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<div class="hud" aria-hidden="true"><span class="lbl red" id="hud-label">[ ЭТАП 01 · ТЗ ]</span><span class="cells" id="hud-cells"><span class="on"></span><span></span><span></span><span></span><span></span></span><span class="pc" id="hud-pc">0%</span></div>
+<header class="top"><div class="wrap">
+<a class="logo" href="index.html">[ КИБЕРБЕЗОПАСНОСТЬ <span class="lg2">ДЛЯ BTW PLAYER ]</span></a>
+<nav class="nav" aria-label="Разделы"><a href="razvod.html">Угрозы</a><a href="sled.html">Защита</a><a href="lab.html" aria-current="page">Практика</a><a href="academy.html">Знания</a></nav>
+<button class="btn sm" type="button" id="calm" aria-pressed="false">спокойный режим</button>
+</div></header>
+<main id="main">
+<section class="wrap">
+<nav class="crumbs" aria-label="Путь"><a href="index.html">Главная</a> / Практика / Лаборатория</nav>
+<div class="phead">
+<div class="stack"><span class="lbl">[ ПРАКТИКА · 01 ]</span><h1 class="glitch-t" data-decode>Лаборатория</h1><p class="muted">5 инструментов: разбери ссылку, проверь пароль, посмотри, как работает шифрование, узнай, что видит сайт, и почисти фото от метаданных. Всё считается в твоём браузере.</p></div>
+<div class="vf cv-box cover-box"><span class="c tl"></span><span class="c tr"></span><span class="c bl"></span><span class="c br"></span><canvas data-ascii="text" data-text="LAB" aria-hidden="true"></canvas></div>
+</div>
+</section><section class="wrap"><div class="build" data-name="ИНСТРУМЕНТЫ" data-slug="tools"><div class="tools">
+<section class="vf card tool" id="tool-url"><span class="c tl"></span><span class="c tr"></span><span class="c bl"></span><span class="c br"></span>
+<span class="lbl red">[ ИНСТРУМЕНТ 01 ]</span><h2 style="font-size:26px">Разбор ссылки</h2>
+<div><label class="f" for="lab-url">Вставь адрес</label><input class="inp" id="lab-url" type="text" inputmode="url" autocomplete="off" spellcheck="false" placeholder="https://..."></div>
+<div class="actions"><button class="btn p sm" type="button" id="lab-url-go">Разобрать</button>
+<button class="btn sm" type="button" data-try="https://severny-bank.ru.secure-check.example/vhod?utm_source=sms">пример 1</button>
+<button class="btn sm" type="button" data-try="https://xn--80ak6aa92e.example/login">пример 2</button>
+<button class="btn sm" type="button" data-try="https://severny-bank.example/cards">пример 3</button></div>
+<div class="out" id="lab-url-out"><span class="k">Вставь адрес и нажми «Разобрать».</span></div>
+<div class="tags" id="lab-url-tags"></div>
+</section>
+<section class="vf card tool" id="tool-pass"><span class="c tl"></span><span class="c tr"></span><span class="c bl"></span><span class="c br"></span>
+<span class="lbl red">[ ИНСТРУМЕНТ 02 ]</span><h2 style="font-size:26px">Стойкость пароля</h2>
+<p class="red small"><b>Не вводи настоящий пароль.</b> Придумай похожий по длине и символам.</p>
+<div><label class="f" for="lab-pass">Пароль для проверки</label><input class="inp" id="lab-pass" type="password" autocomplete="off"></div>
+<div class="meter" id="lab-pass-meter"><i></i></div>
+<div class="out" id="lab-pass-out"><span class="k">Введи пароль для проверки.</span></div>
+</section>
+<section class="vf card tool" id="tool-crypto"><span class="c tl"></span><span class="c tr"></span><span class="c bl"></span><span class="c br"></span>
+<span class="lbl red">[ ИНСТРУМЕНТ 03 ]</span><h2 style="font-size:26px">Шифрование наглядно</h2>
+<div><label class="f" for="lab-text">Текст</label><input class="inp" id="lab-text" type="text" value="встречаемся у метро в 7"></div>
+<div><label class="f" for="lab-key">Ключ (пароль)</label><input class="inp" id="lab-key" type="text" value="мой-ключ"></div>
+<div><span class="f">Шифр AES-256: каждый раз разный из-за случайной соли</span><div class="out" id="lab-cipher"></div></div>
+<div><span class="f">Расшифровано тем же ключом</span><div class="out" id="lab-dec"></div></div>
+<div><span class="f">Хэш SHA-256: всегда одинаковый, обратно не вернуть</span><div class="out" id="lab-hash"></div></div>
+</section>
+<section class="vf card tool" id="tool-device"><span class="c tl"></span><span class="c tr"></span><span class="c bl"></span><span class="c br"></span>
+<span class="lbl red">[ ИНСТРУМЕНТ 04 ]</span><h2 style="font-size:26px">Что сайт знает о тебе</h2>
+<div class="term" data-term></div>
+<p class="muted small">Эти данные любой сайт получает без спроса. IP-адрес и примерный город видит сервер. Этот сайт ничего не сохраняет.</p>
+</section>
+<section class="vf card tool wide" id="tool-photo"><span class="c tl"></span><span class="c tr"></span><span class="c bl"></span><span class="c br"></span>
+<span class="lbl red">[ ИНСТРУМЕНТ 05 ]</span><h2 style="font-size:26px">Метаданные фото</h2>
+<div class="g2">
+<div class="drop" id="lab-drop"><p>Перетащи фото сюда</p><label class="btn sm" for="lab-photo">Выбрать фото</label><input class="vh" id="lab-photo" type="file" accept="image/*"><p class="muted small">Фото не покидает твоё устройство.</p></div>
+<div class="stack"><div class="out" id="lab-exif"><span class="k">Выбери фото, и здесь появятся координаты, модель телефона и дата съёмки, если они есть.</span></div>
+<img class="prev" id="lab-prev" alt="Выбранное фото" hidden>
+<div class="actions"><button class="btn p sm" type="button" id="lab-clean" hidden>Сделать копию без метаданных</button><a class="btn sm" id="lab-dl" hidden>Скачать копию</a></div></div>
+</div>
+</section>
+</div></div></section><section class="wrap"><a class="card next" href="test.html"><span class="h3" style="font:600 20px/27px var(--f-display)">Дальше: тест «Найди подвох»</span><span class="go" aria-hidden="true">→</span></a></section>
+<section class="wrap"><footer class="foot"><div class="stack" style="gap:8px;max-width:520px"><span class="logo">[ КИБЕРБЕЗОПАСНОСТЬ <span class="lg2">ДЛЯ BTW PLAYER ]</span></span><p class="muted small">Учебный проект о приватности и кибербезопасности. Сайт ничего о тебе не собирает: без счётчиков и cookies, а шрифты и скрипты лежат на нём самом, так что страница ни к кому больше не обращается. В браузере хранятся только твои отметки в чек-листе, прочитанные главы и выбор «спокойного режима».</p><p class="muted small">Все банки, магазины и люди в примерах выдуманные. Адреса в зоне .example зарезервированы для учебных примеров и никому не принадлежат.</p></div><nav aria-label="Все страницы"><a href="index.html">Главная</a><a href="razvod.html">Разводы</a><a href="ssylki.html">Ссылки</a><a href="faily.html">Файлы</a><a href="vzlom.html">История взлома</a><a href="sled.html">Свой след</a><a href="checklist.html">Чек-лист</a><a href="lab.html">Лаборатория</a><a href="test.html">Тест</a><a href="academy.html">Академия</a><a href="slovar.html">Словарь</a></nav></footer></section>
+</main>
+<script src="assets/fx.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

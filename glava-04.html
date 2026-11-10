@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'none'; media-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<link rel="canonical" href="https://medved-btw.github.io/glava-04.html">
+<meta property="og:url" content="https://medved-btw.github.io/glava-04.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Глава 04. На чём пишут вредоносы · Кибербезопасность для btw player</title>
+<meta name="description" content="Язык программирования не бывает «злым». Важно не на чём написана программа, а что она делает. Но выбор языка многое говорит о том, как работает атака.">
+<meta property="og:site_name" content="Кибербезопасность для btw player">
+<meta property="og:title" content="Глава 04. На чём пишут вредоносы">
+<meta property="og:description" content="Язык программирования не бывает «злым». Важно не на чём написана программа, а что она делает. Но выбор языка многое говорит о том, как работает атака.">
+<meta name="referrer" content="no-referrer">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/fx.css">
+</head>
+<body data-chapter="04">
+<a class="skip" href="#main">К содержимому</a>
+<div class="screen-vf" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<div class="hud" aria-hidden="true"><span class="lbl red" id="hud-label">[ ЭТАП 01 · ТЗ ]</span><span class="cells" id="hud-cells"><span class="on"></span><span></span><span></span><span></span><span></span></span><span class="pc" id="hud-pc">0%</span></div>
+<header class="top"><div class="wrap">
+<a class="logo" href="index.html">[ КИБЕРБЕЗОПАСНОСТЬ <span class="lg2">ДЛЯ BTW PLAYER ]</span></a>
+<nav class="nav" aria-label="Разделы"><a href="razvod.html">Угрозы</a><a href="sled.html">Защита</a><a href="lab.html">Практика</a><a href="academy.html" aria-current="page">Знания</a></nav>
+<button class="btn sm" type="button" id="calm" aria-pressed="false">спокойный режим</button>
+</div></header>
+<main id="main">
+<section class="wrap">
+<nav class="crumbs" aria-label="Путь"><a href="index.html">Главная</a> / <a href="academy.html">Академия</a> / Глава 04</nav>
+<div class="phead">
+<div class="stack"><span class="lbl">[ ГЛАВА 04 · 5-7 МИНУТ · 3 ВОПРОСА ]</span><h1 class="glitch-t" data-decode>На чём пишут вредоносы</h1><p class="muted">Язык программирования не бывает «злым». Важно не на чём написана программа, а что она делает. Но выбор языка многое говорит о том, как работает атака.</p></div>
+<div class="vf cv-box cover-box"><span class="c tl"></span><span class="c tr"></span><span class="c bl"></span><span class="c br"></span><canvas data-ascii="text" data-text="</>" aria-hidden="true"></canvas></div>
+</div>
+</section><section class="wrap"><div class="build" data-name="ГЛАВА 04" data-slug="chapter"><div class="chapter">
+<aside class="toc" aria-label="В этой главе"><span class="lbl">[ В ЭТОЙ ГЛАВЕ ]</span><a href="#low">C и C++: близко к системе</a><a href="#net">C# и .NET: быстро для Windows</a><a href="#script">Python, PowerShell, JavaScript и макросы</a><a href="#modern">Go и Rust: одна программа на все системы</a><a href="#mobile">Java и Kotlin: Android</a><a href="#def">Те же языки у защитников</a><a href="#quiz">Проверь себя</a><a href="#sources">Источники</a></aside>
+<article class="prose"><section id="low" class="stack"><h2>C и C++: близко к системе</h2><p>Дают прямой доступ к памяти и функциям операционной системы, программы получаются маленькими и быстрыми. Поэтому на них пишут то, что должно работать незаметно и глубоко в системе. На этих же языках написаны сами Windows, браузеры и антивирусы.</p></section><section id="net" class="stack"><h2>C# и .NET: быстро для Windows</h2><p>Позволяют быстро собрать программу под Windows с окнами, сетью и шифрованием. Многие программы-кражи паролей, стилеры, написаны именно так.</p></section><section id="script" class="stack"><h2>Python, PowerShell, JavaScript и макросы</h2><p>Скриптовые языки удобны тем, что их «переводчик» часто уже есть в системе. PowerShell встроен в Windows, JavaScript есть в каждом браузере, макросы на VBA живут в документах Office. Атакующему не нужно ничего устанавливать: он пользуется тем, что уже есть. ILOVEYOU в 2000 году был простым скриптом на VBScript.</p></section><section id="modern" class="stack"><h2>Go и Rust: одна программа на все системы</h2><p>Из одного кода собираются версии для Windows, Linux и macOS. Готовая программа большая и непривычная для анализа, поэтому защитникам сложнее её разбирать. На этих языках написаны многие современные шифровальщики.</p></section><section id="mobile" class="stack"><h2>Java и Kotlin: Android</h2><p>Основные языки приложений для Android. На них же пишут банковские трояны, которые маскируются под «приложение банка» или «трекер посылки» и читают СМС с кодами.</p></section><section id="def" class="stack"><h2>Те же языки у защитников</h2><p>Python пишут аналитики, которые разбирают вредоносы. C и C++ пишут антивирусы. Языки одни и те же, разница только в том, кто и зачем пишет. Создание и распространение вредоносных программ в России уголовно наказуемо по статье 273 УК РФ.</p></section>
+<div class="key"><span class="lbl red">[ ГЛАВНОЕ ИЗ ГЛАВЫ ]</span><p>Язык выбирают под задачу: глубоко в системе, быстро под Windows, без установки через скрипты или сразу под все платформы. Защитники пользуются теми же языками.</p></div>
+<section id="quiz" class="stack"><h2>Проверь себя</h2><div class="cq" data-answer="1" data-why="Ничего не нужно устанавливать: всё уже под рукой."><fieldset><legend>1. Почему атакующие любят PowerShell и макросы?</legend><label class="opt" for="q04-1-0"><input type="radio" name="q04-1" id="q04-1-0"><span>Они самые быстрые</span></label><label class="opt" for="q04-1-1"><input type="radio" name="q04-1" id="q04-1-1"><span>Они уже есть в системе и в документах</span></label><label class="opt" for="q04-1-2"><input type="radio" name="q04-1" id="q04-1-2"><span>Их нельзя запретить</span></label></fieldset><p class="res" hidden></p></div><div class="cq" data-answer="0" data-why="Одна программа собирается под Windows, Linux и macOS."><fieldset><legend>2. Чем удобны Go и Rust для современных вредоносов?</legend><label class="opt" for="q04-2-0"><input type="radio" name="q04-2" id="q04-2-0"><span>Одна кодовая база для разных систем</span></label><label class="opt" for="q04-2-1"><input type="radio" name="q04-2" id="q04-2-1"><span>Работают только на телефонах</span></label><label class="opt" for="q04-2-2"><input type="radio" name="q04-2" id="q04-2-2"><span>Не требуют компьютера</span></label></fieldset><p class="res" hidden></p></div><div class="cq" data-answer="1" data-why="Язык нейтрален, важно поведение программы."><fieldset><legend>3. Что делает программу вредоносной?</legend><label class="opt" for="q04-3-0"><input type="radio" name="q04-3" id="q04-3-0"><span>Язык, на котором она написана</span></label><label class="opt" for="q04-3-1"><input type="radio" name="q04-3" id="q04-3-1"><span>То, что она делает</span></label><label class="opt" for="q04-3-2"><input type="radio" name="q04-3" id="q04-3-2"><span>Её размер</span></label></fieldset><p class="res" hidden></p></div></section>
+<section id="sources" class="stack"><h2>Источники</h2><div class="src"><a href="https://www.kaspersky.com/blog/cybersecurity-history-iloveyou/45001/" rel="noopener noreferrer">ILOVEYOU: написан на VBScript (Kaspersky)</a></div></section>
+<nav class="pn" aria-label="Главы"><a class="btn" href="glava-03.html">← Глава 03</a><a class="btn p" href="glava-05.html">Глава 05: Как устроен интернет →</a></nav>
+</article></div></div></section>
+<section class="wrap"><footer class="foot"><div class="stack" style="gap:8px;max-width:520px"><span class="logo">[ КИБЕРБЕЗОПАСНОСТЬ <span class="lg2">ДЛЯ BTW PLAYER ]</span></span><p class="muted small">Учебный проект о приватности и кибербезопасности. Сайт ничего о тебе не собирает: без счётчиков и cookies, а шрифты и скрипты лежат на нём самом, так что страница ни к кому больше не обращается. В браузере хранятся только твои отметки в чек-листе, прочитанные главы и выбор «спокойного режима».</p><p class="muted small">Все банки, магазины и люди в примерах выдуманные. Адреса в зоне .example зарезервированы для учебных примеров и никому не принадлежат.</p></div><nav aria-label="Все страницы"><a href="index.html">Главная</a><a href="razvod.html">Разводы</a><a href="ssylki.html">Ссылки</a><a href="faily.html">Файлы</a><a href="vzlom.html">История взлома</a><a href="sled.html">Свой след</a><a href="checklist.html">Чек-лист</a><a href="lab.html">Лаборатория</a><a href="test.html">Тест</a><a href="academy.html">Академия</a><a href="slovar.html">Словарь</a></nav></footer></section>
+</main>
+<script src="assets/fx.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

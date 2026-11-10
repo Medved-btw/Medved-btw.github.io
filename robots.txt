@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://medved-btw.github.io/sitemap.xml

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'none'; media-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<link rel="canonical" href="https://medved-btw.github.io/glava-05.html">
+<meta property="og:url" content="https://medved-btw.github.io/glava-05.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Глава 05. Как устроен интернет · Кибербезопасность для btw player</title>
+<meta name="description" content="Чтобы понимать атаки, нужно понимать, как данные идут от тебя до сайта и кто по дороге что видит.">
+<meta property="og:site_name" content="Кибербезопасность для btw player">
+<meta property="og:title" content="Глава 05. Как устроен интернет">
+<meta property="og:description" content="Чтобы понимать атаки, нужно понимать, как данные идут от тебя до сайта и кто по дороге что видит.">
+<meta name="referrer" content="no-referrer">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/fx.css">
+</head>
+<body data-chapter="05">
+<a class="skip" href="#main">К содержимому</a>
+<div class="screen-vf" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<div class="hud" aria-hidden="true"><span class="lbl red" id="hud-label">[ ЭТАП 01 · ТЗ ]</span><span class="cells" id="hud-cells"><span class="on"></span><span></span><span></span><span></span><span></span></span><span class="pc" id="hud-pc">0%</span></div>
+<header class="top"><div class="wrap">
+<a class="logo" href="index.html">[ КИБЕРБЕЗОПАСНОСТЬ <span class="lg2">ДЛЯ BTW PLAYER ]</span></a>
+<nav class="nav" aria-label="Разделы"><a href="razvod.html">Угрозы</a><a href="sled.html">Защита</a><a href="lab.html">Практика</a><a href="academy.html" aria-current="page">Знания</a></nav>
+<button class="btn sm" type="button" id="calm" aria-pressed="false">спокойный режим</button>
+</div></header>
+<main id="main">
+<section class="wrap">
+<nav class="crumbs" aria-label="Путь"><a href="index.html">Главная</a> / <a href="academy.html">Академия</a> / Глава 05</nav>
+<div class="phead">
+<div class="stack"><span class="lbl">[ ГЛАВА 05 · 5-7 МИНУТ · 3 ВОПРОСА ]</span><h1 class="glitch-t" data-decode>Как устроен интернет</h1><p class="muted">Чтобы понимать атаки, нужно понимать, как данные идут от тебя до сайта и кто по дороге что видит.</p></div>
+<div class="vf cv-box cover-box"><span class="c tl"></span><span class="c tr"></span><span class="c bl"></span><span class="c br"></span><canvas data-ascii="text" data-text="IP" aria-hidden="true"></canvas></div>
+</div>
+</section><section class="wrap"><div class="build" data-name="ГЛАВА 05" data-slug="chapter"><div class="chapter">
+<aside class="toc" aria-label="В этой главе"><span class="lbl">[ В ЭТОЙ ГЛАВЕ ]</span><a href="#ip">IP-адрес: твой адрес в сети</a><a href="#dns">DNS: телефонная книга интернета</a><a href="#https">HTTP и HTTPS: открытка и конверт</a><a href="#cookies">Cookies: память сайта о тебе</a><a href="#who">Кто что видит</a><a href="#quiz">Проверь себя</a><a href="#sources">Источники</a></aside>
+<article class="prose"><section id="ip" class="stack"><h2>IP-адрес: твой адрес в сети</h2><p>Каждое устройство в интернете получает IP-адрес, иначе ему некуда отправить ответ. Сайт видит IP всегда. По нему можно примерно определить город и провайдера, но не квартиру. Точный адрес по IP знает только провайдер.</p></section><section id="dns" class="stack"><h2>DNS: телефонная книга интернета</h2><p>Ты пишешь имя сайта, а компьютер спрашивает у DNS, какой у этого имени IP-адрес. Мошенникам достаточно зарегистрировать похожее имя: DNS честно вернёт адрес их сервера. Поэтому так важно читать адрес, а не узнавать картинку.</p></section><section id="https" class="stack"><h2>HTTP и HTTPS: открытка и конверт</h2><p>HTTP похож на открытку: любой по дороге может прочитать текст. HTTPS похож на запечатанный конверт: содержимое зашифровано между тобой и сайтом.</p>
+<p>Но замок в адресной строке говорит только о шифровании канала. Он не говорит, что сайт честный: сертификат может получить кто угодно, включая мошенников.</p></section><section id="cookies" class="stack"><h2>Cookies: память сайта о тебе</h2><p>Сайт кладёт в браузер маленькую запись, чтобы помнить вход и корзину. Сторонние cookies ставят рекламные сети: они видят тебя на многих сайтах и собирают профиль интересов.</p></section><section id="who" class="stack"><h2>Кто что видит</h2><ul>
+<li><b>Сайт</b>: твой IP, браузер, язык, экран, всё, что ты делаешь на нём.</li>
+<li><b>Провайдер или владелец Wi-Fi</b>: к каким сайтам ты ходишь и когда. С HTTPS он не видит, что именно ты читаешь и вводишь.</li>
+<li><b>Режим инкогнито</b> скрывает историю только от других людей на твоём устройстве. Сайты и провайдер видят всё как обычно.</li>
+</ul></section>
+<div class="key"><span class="lbl red">[ ГЛАВНОЕ ИЗ ГЛАВЫ ]</span><p>Замок значит шифрование, а не честность. Инкогнито прячет историю только на твоём устройстве. Сайт и провайдер видят больше, чем кажется.</p></div>
+<section id="quiz" class="stack"><h2>Проверь себя</h2><div class="cq" data-answer="1" data-why="Сертификат может получить кто угодно, включая мошенников."><fieldset><legend>1. Что означает замок в адресной строке?</legend><label class="opt" for="q05-1-0"><input type="radio" name="q05-1" id="q05-1-0"><span>Сайт проверен и безопасен</span></label><label class="opt" for="q05-1-1"><input type="radio" name="q05-1" id="q05-1-1"><span>Соединение с сайтом шифруется</span></label><label class="opt" for="q05-1-2"><input type="radio" name="q05-1" id="q05-1-2"><span>Сайт принадлежит банку</span></label></fieldset><p class="res" hidden></p></div><div class="cq" data-answer="2" data-why="Он не сохраняет историю на устройстве, и только."><fieldset><legend>2. От кого скрывает режим инкогнито?</legend><label class="opt" for="q05-2-0"><input type="radio" name="q05-2" id="q05-2-0"><span>От провайдера</span></label><label class="opt" for="q05-2-1"><input type="radio" name="q05-2" id="q05-2-1"><span>От сайтов</span></label><label class="opt" for="q05-2-2"><input type="radio" name="q05-2" id="q05-2-2"><span>От других людей на этом же устройстве</span></label></fieldset><p class="res" hidden></p></div><div class="cq" data-answer="1" data-why="Поэтому похожее имя ведёт на чужой сервер."><fieldset><legend>3. Что делает DNS?</legend><label class="opt" for="q05-3-0"><input type="radio" name="q05-3" id="q05-3-0"><span>Шифрует пароли</span></label><label class="opt" for="q05-3-1"><input type="radio" name="q05-3" id="q05-3-1"><span>Превращает имя сайта в IP-адрес</span></label><label class="opt" for="q05-3-2"><input type="radio" name="q05-3" id="q05-3-2"><span>Блокирует рекламу</span></label></fieldset><p class="res" hidden></p></div></section>
+<section id="sources" class="stack"><h2>Источники</h2><div class="src"><a href="https://www.securitylab.ru/blog/personal/Neurosinaps/360099.php" rel="noopener noreferrer">Режим инкогнито: от чего не защищает (SecurityLab)</a><a href="https://adguard.com/ru/blog/incognito-mode-fake-protection-chrome.html" rel="noopener noreferrer">Инкогнито не защищает приватность (AdGuard)</a></div></section>
+<nav class="pn" aria-label="Главы"><a class="btn" href="glava-04.html">← Глава 04</a><a class="btn p" href="glava-06.html">Глава 06: Криптография простыми словами →</a></nav>
+</article></div></div></section>
+<section class="wrap"><footer class="foot"><div class="stack" style="gap:8px;max-width:520px"><span class="logo">[ КИБЕРБЕЗОПАСНОСТЬ <span class="lg2">ДЛЯ BTW PLAYER ]</span></span><p class="muted small">Учебный проект о приватности и кибербезопасности. Сайт ничего о тебе не собирает: без счётчиков и cookies, а шрифты и скрипты лежат на нём самом, так что страница ни к кому больше не обращается. В браузере хранятся только твои отметки в чек-листе, прочитанные главы и выбор «спокойного режима».</p><p class="muted small">Все банки, магазины и люди в примерах выдуманные. Адреса в зоне .example зарезервированы для учебных примеров и никому не принадлежат.</p></div><nav aria-label="Все страницы"><a href="index.html">Главная</a><a href="razvod.html">Разводы</a><a href="ssylki.html">Ссылки</a><a href="faily.html">Файлы</a><a href="vzlom.html">История взлома</a><a href="sled.html">Свой след</a><a href="checklist.html">Чек-лист</a><a href="lab.html">Лаборатория</a><a href="test.html">Тест</a><a href="academy.html">Академия</a><a href="slovar.html">Словарь</a></nav></footer></section>
+</main>
+<script src="assets/fx.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

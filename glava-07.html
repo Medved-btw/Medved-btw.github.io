@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'none'; media-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<link rel="canonical" href="https://medved-btw.github.io/glava-07.html">
+<meta property="og:url" content="https://medved-btw.github.io/glava-07.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Глава 07. Уязвимости и патчи · Кибербезопасность для btw player</title>
+<meta name="description" content="В любой большой программе есть ошибки. Часть из них открывает дверь атакующему. Вся гонка безопасности идёт между тем, кто найдёт дыру первым.">
+<meta property="og:site_name" content="Кибербезопасность для btw player">
+<meta property="og:title" content="Глава 07. Уязвимости и патчи">
+<meta property="og:description" content="В любой большой программе есть ошибки. Часть из них открывает дверь атакующему. Вся гонка безопасности идёт между тем, кто найдёт дыру первым.">
+<meta name="referrer" content="no-referrer">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/fx.css">
+</head>
+<body data-chapter="07">
+<a class="skip" href="#main">К содержимому</a>
+<div class="screen-vf" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<div class="hud" aria-hidden="true"><span class="lbl red" id="hud-label">[ ЭТАП 01 · ТЗ ]</span><span class="cells" id="hud-cells"><span class="on"></span><span></span><span></span><span></span><span></span></span><span class="pc" id="hud-pc">0%</span></div>
+<header class="top"><div class="wrap">
+<a class="logo" href="index.html">[ КИБЕРБЕЗОПАСНОСТЬ <span class="lg2">ДЛЯ BTW PLAYER ]</span></a>
+<nav class="nav" aria-label="Разделы"><a href="razvod.html">Угрозы</a><a href="sled.html">Защита</a><a href="lab.html">Практика</a><a href="academy.html" aria-current="page">Знания</a></nav>
+<button class="btn sm" type="button" id="calm" aria-pressed="false">спокойный режим</button>
+</div></header>
+<main id="main">
+<section class="wrap">
+<nav class="crumbs" aria-label="Путь"><a href="index.html">Главная</a> / <a href="academy.html">Академия</a> / Глава 07</nav>
+<div class="phead">
+<div class="stack"><span class="lbl">[ ГЛАВА 07 · 5-7 МИНУТ · 3 ВОПРОСА ]</span><h1 class="glitch-t" data-decode>Уязвимости и патчи</h1><p class="muted">В любой большой программе есть ошибки. Часть из них открывает дверь атакующему. Вся гонка безопасности идёт между тем, кто найдёт дыру первым.</p></div>
+<div class="vf cv-box cover-box"><span class="c tl"></span><span class="c tr"></span><span class="c bl"></span><span class="c br"></span><canvas data-ascii="text" data-text="0DAY" aria-hidden="true"></canvas></div>
+</div>
+</section><section class="wrap"><div class="build" data-name="ГЛАВА 07" data-slug="chapter"><div class="chapter">
+<aside class="toc" aria-label="В этой главе"><span class="lbl">[ В ЭТОЙ ГЛАВЕ ]</span><a href="#bug">Баг, уязвимость, эксплойт</a><a href="#zero">Уязвимость нулевого дня</a><a href="#cve">CVE: каталог уязвимостей</a><a href="#patch">Почему обновляться</a><a href="#bounty">Bug bounty: плата за найденные дыры</a><a href="#quiz">Проверь себя</a><a href="#sources">Источники</a></aside>
+<article class="prose"><section id="bug" class="stack"><h2>Баг, уязвимость, эксплойт</h2><ul>
+<li><b>Баг</b>: любая ошибка в программе.</li>
+<li><b>Уязвимость</b>: ошибка, которой можно воспользоваться во вред.</li>
+<li><b>Эксплойт</b>: способ или программа, которые этой уязвимостью пользуются.</li>
+</ul></section><section id="zero" class="stack"><h2>Уязвимость нулевого дня</h2><p>Это дыра, о которой разработчик ещё не знает, а значит, у него было «ноль дней» на исправление. Такие уязвимости дорого стоят и чаще используются в целевых атаках. Stuxnet, например, использовал сразу несколько уязвимостей нулевого дня.</p></section><section id="cve" class="stack"><h2>CVE: каталог уязвимостей</h2><p>Чтобы все говорили об одной и той же проблеме, каждой публично известной уязвимости присваивают номер вида CVE-ГОД-НОМЕР. Каталог ведётся на сайте cve.org. Например, уязвимость, через которую распространялся WannaCry, известна как CVE-2017-0144.</p></section><section id="patch" class="stack"><h2>Почему обновляться</h2><p>Обновление закрывает найденные дыры. Но как только исправление вышло, атакующие тоже узнают, где была дыра, и начинают искать тех, кто не обновился. WannaCry ударил через два месяца после выхода исправления. Поэтому лучше включить автообновление системы, браузера и приложений.</p></section><section id="bounty" class="stack"><h2>Bug bounty: плата за найденные дыры</h2><p>Компании платят исследователям за найденные уязвимости, чтобы узнать о них раньше преступников. В России для этого есть отдельные платформы. Это законный путь: исследователь работает в рамках правил программы, и компания сама приглашает его искать.</p></section>
+<div class="key"><span class="lbl red">[ ГЛАВНОЕ ИЗ ГЛАВЫ ]</span><p>Каждое обновление закрывает дыры, о которых атакующие уже знают. Самая дешёвая защита в мире: не откладывать обновления.</p></div>
+<section id="quiz" class="stack"><h2>Проверь себя</h2><div class="cq" data-answer="0" data-why="У разработчика было «ноль дней» на исправление."><fieldset><legend>1. Что такое уязвимость нулевого дня?</legend><label class="opt" for="q07-1-0"><input type="radio" name="q07-1" id="q07-1-0"><span>Дыра, о которой разработчик ещё не знает</span></label><label class="opt" for="q07-1-1"><input type="radio" name="q07-1" id="q07-1-1"><span>Ошибка, исправленная сегодня</span></label><label class="opt" for="q07-1-2"><input type="radio" name="q07-1" id="q07-1-2"><span>Вирус, который живёт один день</span></label></fieldset><p class="res" hidden></p></div><div class="cq" data-answer="0" data-why="Номер вида CVE-ГОД-НОМЕР однозначно указывает на уязвимость."><fieldset><legend>2. Зачем нужен номер CVE?</legend><label class="opt" for="q07-2-0"><input type="radio" name="q07-2" id="q07-2-0"><span>Чтобы все говорили об одной и той же уязвимости</span></label><label class="opt" for="q07-2-1"><input type="radio" name="q07-2" id="q07-2-1"><span>Это пароль от уязвимости</span></label><label class="opt" for="q07-2-2"><input type="radio" name="q07-2" id="q07-2-2"><span>Это название антивируса</span></label></fieldset><p class="res" hidden></p></div><div class="cq" data-answer="1" data-why="Так случилось с WannaCry."><fieldset><legend>3. Почему опасно откладывать обновления?</legend><label class="opt" for="q07-3-0"><input type="radio" name="q07-3" id="q07-3-0"><span>Обновления замедляют компьютер</span></label><label class="opt" for="q07-3-1"><input type="radio" name="q07-3" id="q07-3-1"><span>После выхода исправления атакующие ищут тех, кто не обновился</span></label><label class="opt" for="q07-3-2"><input type="radio" name="q07-3" id="q07-3-2"><span>Это не опасно</span></label></fieldset><p class="res" hidden></p></div></section>
+<section id="sources" class="stack"><h2>Источники</h2><div class="src"><a href="https://www.securitylab.ru/analytics/532385.php" rel="noopener noreferrer">Что такое CVE? (SecurityLab)</a><a href="https://www.cve.org/Resources/Media/Archives/OldWebsite/about/index.html" rel="noopener noreferrer">About CVE (cve.org)</a><a href="https://www.securitylab.ru/blog/company/PandaSecurityRus/341867.php" rel="noopener noreferrer">Хронология EternalBlue и WannaCry (SecurityLab)</a></div></section>
+<nav class="pn" aria-label="Главы"><a class="btn" href="glava-06.html">← Глава 06</a><a class="btn p" href="glava-08.html">Глава 08: Атаки на сайты и сервисы →</a></nav>
+</article></div></div></section>
+<section class="wrap"><footer class="foot"><div class="stack" style="gap:8px;max-width:520px"><span class="logo">[ КИБЕРБЕЗОПАСНОСТЬ <span class="lg2">ДЛЯ BTW PLAYER ]</span></span><p class="muted small">Учебный проект о приватности и кибербезопасности. Сайт ничего о тебе не собирает: без счётчиков и cookies, а шрифты и скрипты лежат на нём самом, так что страница ни к кому больше не обращается. В браузере хранятся только твои отметки в чек-листе, прочитанные главы и выбор «спокойного режима».</p><p class="muted small">Все банки, магазины и люди в примерах выдуманные. Адреса в зоне .example зарезервированы для учебных примеров и никому не принадлежат.</p></div><nav aria-label="Все страницы"><a href="index.html">Главная</a><a href="razvod.html">Разводы</a><a href="ssylki.html">Ссылки</a><a href="faily.html">Файлы</a><a href="vzlom.html">История взлома</a><a href="sled.html">Свой след</a><a href="checklist.html">Чек-лист</a><a href="lab.html">Лаборатория</a><a href="test.html">Тест</a><a href="academy.html">Академия</a><a href="slovar.html">Словарь</a></nav></footer></section>
+</main>
+<script src="assets/fx.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
